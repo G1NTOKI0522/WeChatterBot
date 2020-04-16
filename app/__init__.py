@@ -24,6 +24,7 @@ from app.chatterbot_api.conversation_manager import bp_manager
 def create_app(object_name):
     app = Flask(__name__)
     app.config.from_object(object_name)
+    app.debug=True
 
     #app.register_blueprint(bp_response,url_prefix='/chatterbot')
     app.register_blueprint(bp_manager, url_prefix='/manager')
