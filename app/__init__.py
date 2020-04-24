@@ -27,7 +27,7 @@ def create_app(object_name):
     app.debug=True
 
     #app.register_blueprint(bp_response,url_prefix='/chatterbot')
-    app.register_blueprint(bp_manager, url_prefix='/manager')
+    app.register_blueprint(bp_manager, url_prefix='/admin')
     #app.register_blueprint(bp_account)
     #app.register_blueprint(bp_info)
     #app.register_blueprint(bp_data)
