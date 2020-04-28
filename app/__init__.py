@@ -1,5 +1,5 @@
 from flask import Flask
-#from app.chatterbot_api.get_response import bp_response
+from app.chatterbot_api.get_response import bp_response
 from app.chatterbot_api.conversation_manager import bp_manager
 #from app.libs.login import login_manager
 #from app.libs.db import db
@@ -24,27 +24,27 @@ from app.chatterbot_api.conversation_manager import bp_manager
 def create_app(object_name):
     app = Flask(__name__)
     app.config.from_object(object_name)
-    app.debug=True
+    app.debug = True
 
-    #app.register_blueprint(bp_response,url_prefix='/chatterbot')
+    app.register_blueprint(bp_response, url_prefix='/chatterbot')
     app.register_blueprint(bp_manager, url_prefix='/admin')
-    #app.register_blueprint(bp_account)
-    #app.register_blueprint(bp_info)
-    #app.register_blueprint(bp_data)
-    #app.register_blueprint(bp_notification)
-    #app.register_blueprint(bp_admin_notification)
-    #app.register_blueprint(bp_admin_time)
-    #app.register_blueprint(bp_admin_summary)
-    #app.register_blueprint(bp_admin_data_check)
-    #app.register_blueprint(bp_admin_trend)
-    #app.register_blueprint(bp_admin_system)
-    #app.register_blueprint(bp_admin_info)
-    #app.register_blueprint(bp_admin_compare)
-    #app.register_blueprint(bp_admin_sample)
-    #app.register_blueprint(bp_admin_user)
-    #app.register_blueprint(bp_admin_data)
-
-    #login_manager.init_app(app)
-    #db.init_app(app)
+    # app.register_blueprint(bp_hello_world)
+    # app.register_blueprint(bp_account)
+    # app.register_blueprint(bp_info)
+    # app.register_blueprint(bp_data)
+    # app.register_blueprint(bp_notification)
+    # app.register_blueprint(bp_admin_notification)
+    # app.register_blueprint(bp_admin_time)
+    # app.register_blueprint(bp_admin_summary)
+    # app.register_blueprint(bp_admin_data_check)
+    # app.register_blueprint(bp_admin_trend)
+    # app.register_blueprint(bp_admin_system)
+    # app.register_blueprint(bp_admin_info)
+    # app.register_blueprint(bp_admin_compare)
+    # app.register_blueprint(bp_admin_sample)
+    # app.register_blueprint(bp_admin_user)
+    # app.register_blueprint(bp_admin_data)
+    # login_manager.init_app(app)
+    # db.init_app(app)
 
     return app
